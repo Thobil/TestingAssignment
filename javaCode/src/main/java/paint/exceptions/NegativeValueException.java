@@ -1,4 +1,4 @@
-package paint.Exceptions;
+package paint.exceptions;
 
 public class NegativeValueException extends Throwable {
 }

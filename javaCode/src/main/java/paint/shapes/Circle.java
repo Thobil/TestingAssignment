@@ -1,6 +1,6 @@
 package paint.shapes;
 
-import paint.Exceptions.NegativeValueException;
+import paint.exceptions.NegativeValueException;
 
 public class Circle extends GeneralShape implements BasicShape{
 

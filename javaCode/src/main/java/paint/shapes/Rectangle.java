@@ -1,6 +1,6 @@
 package paint.shapes;
 
-import paint.Exceptions.NegativeValueException;
+import paint.exceptions.NegativeValueException;
 
 public class Rectangle extends GeneralShape implements BasicShape  {
 

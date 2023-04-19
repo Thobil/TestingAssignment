@@ -1,6 +1,6 @@
 package paint.launcher;
 
-import paint.Exceptions.NegativeValueException;
+import paint.exceptions.NegativeValueException;
 import paint.shapes.*;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package paint.shapes;
 
-import paint.Exceptions.NegativeValueException;
+import paint.exceptions.NegativeValueException;
 
 public class Square extends Rectangle{
     public Square(double edge, String name) throws NegativeValueException {
