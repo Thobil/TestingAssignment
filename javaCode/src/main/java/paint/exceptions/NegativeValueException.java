@@ -1,4 +1,4 @@
 package paint.exceptions;
 
-public class NegativeValueException extends Throwable {
+public class NegativeValueException extends Exception {
 }

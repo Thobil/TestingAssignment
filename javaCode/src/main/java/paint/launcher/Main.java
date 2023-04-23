@@ -26,7 +26,7 @@ public class Main {
             drawing.add(new Rectangle(50,50, null));
 
             drawing.add(new Square(0, null));
-            drawing.add(new Square(-10, null));
+            //drawing.add(new Square(-10, null));
         }catch (NegativeValueException nve){
             nve.printStackTrace();
         }

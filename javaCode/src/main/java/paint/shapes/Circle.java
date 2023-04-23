@@ -14,12 +14,12 @@ public class Circle extends GeneralShape implements BasicShape{
     }
 
     @Override
-    public double getArea() {
+    public double getPerimeter() {
         return ( this.radius * 2 * Math.PI );
     }
 
     @Override
-    public double getPerimeter() {
+    public double getArea() {
         return ( this.radius * this.radius * Math.PI);
     }
 

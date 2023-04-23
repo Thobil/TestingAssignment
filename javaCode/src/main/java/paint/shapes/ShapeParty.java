@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShapeParty {
-    List<BasicShape> shapes;
+    public List<BasicShape> shapes;
 
     public ShapeParty(){
         this.shapes = new ArrayList<>();
