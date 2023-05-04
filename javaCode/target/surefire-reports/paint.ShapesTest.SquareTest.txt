@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: paint.ShapesTest.SquareTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in paint.ShapesTest.SquareTest

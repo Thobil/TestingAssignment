@@ -4,7 +4,7 @@ public class GeneralShape {
     final String name;
 
 
-    GeneralShape(String n){
+    public GeneralShape(String n){
         this.name = n;
     }
 

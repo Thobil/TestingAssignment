@@ -1,0 +1,8 @@
+paint\shapes\Rectangle.class
+paint\shapes\ShapeParty.class
+paint\exceptions\NegativeValueException.class
+paint\shapes\Circle.class
+paint\shapes\BasicShape.class
+paint\launcher\Main.class
+paint\shapes\GeneralShape.class
+paint\shapes\Square.class

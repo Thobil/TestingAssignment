@@ -1,4 +1,4 @@
-package shapeTests;
+package paint.GeneralTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import paint.shapes.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 public class ShapePartyTest {
@@ -126,7 +126,7 @@ public class ShapePartyTest {
      * Test class ShapeParty function calculTotalArea() independently of other classes.
      */
     @Test
-    public void mockTest() throws NegativeValueException {
+    public void mockTest() {
 
         when(shape1.getArea()).thenReturn(10.0);
         when(shape2.getArea()).thenReturn(10.0);
@@ -141,5 +141,36 @@ public class ShapePartyTest {
         ShapeParty instance = new ShapeParty(listShapes);
 
         assertEquals(30, instance.calculTotalArea());
+    }
+
+    @Test
+    public void removeTest() throws NegativeValueException {
+        List<BasicShape> listShapes = new ArrayList<>();
+
+        Square s = new Square(10, null);
+
+        listShapes.add(s);
+        listShapes.add(new Rectangle(10,15, null));
+        listShapes.add(new Circle(5.0, "Circle A"));
+
+        ShapeParty instance = new ShapeParty(listShapes);
+
+        assertTrue(instance.removeShape(s));
+        assertFalse(instance.removeShape(s));
+    }
+
+    @Test
+    public void nameTest() throws NegativeValueException {
+        List<BasicShape> listShapes = new ArrayList<>();
+
+        Square s = new Square(10, null);
+
+        listShapes.add(s);
+        listShapes.add(new Rectangle(10,15, null));
+        listShapes.add(new Circle(5.0, "Circle A"));
+
+        ShapeParty instance = new ShapeParty(listShapes);
+
+        assertNotEquals("", instance.toString());
     }
 }

@@ -1,11 +1,10 @@
-package shapeTests;
+package paint.ShapesTest;
 
 import org.junit.jupiter.api.Test;
 import paint.exceptions.NegativeValueException;
 import paint.shapes.Circle;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class CircleTest {
@@ -40,5 +39,17 @@ public class CircleTest {
     @Test
     public void testThrowsNegativeValueException() {
         assertThrows(NegativeValueException.class, () -> new Circle(-10, "TestCircle"));
+
+        assertDoesNotThrow(() -> new Circle(0, "TestCircle"));
+    }
+
+    @Test
+    public void nameTest() throws NegativeValueException {
+        Circle instance = new Circle(10, "TestCircle");
+        assertNotEquals("", instance.toString());
+
+        assertEquals("TestCircle of radius 10.0",instance.toString());
+        instance = new Circle(10, null);
+        assertEquals("Circle of radius 10.0",instance.toString());
     }
 }

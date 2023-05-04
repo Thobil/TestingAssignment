@@ -1,11 +1,10 @@
-package shapeTests;
+package paint.ShapesTest;
 
 import org.junit.jupiter.api.Test;
 import paint.exceptions.NegativeValueException;
 import paint.shapes.Rectangle;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangleTest {
 
@@ -39,5 +38,7 @@ public class RectangleTest {
     @Test
     public void testThrowsNegativeValueException() {
         assertThrows(NegativeValueException.class, () -> new Rectangle(-10, 15, "TestRectangle"));
+
+        assertDoesNotThrow(() ->  new Rectangle(0, 0,"TestRectangle"));
     }
 }

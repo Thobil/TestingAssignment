@@ -1,4 +1,4 @@
-package shapeTests;
+package paint.ShapesTest;
 
 import org.junit.jupiter.api.Test;
 import paint.exceptions.NegativeValueException;
@@ -39,5 +39,13 @@ public class SquareTest {
     @Test
     public void testThrowsNegativeValueException() {
         assertThrows(NegativeValueException.class, () -> new Square(-10, "TestRectangle"));
+    }
+
+    @Test
+    public void testNameSquare() throws NegativeValueException {
+        Square sNull = new Square(5,null);
+        assertEquals("Square of length 5.0 and of height 5.0",sNull.toString());
+        Square sNotNull = new Square(5,"S");
+        assertEquals("S of length 5.0 and of height 5.0",sNotNull.toString());
     }
 }
